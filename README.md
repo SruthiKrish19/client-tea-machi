@@ -5,7 +5,7 @@ Tea Machi is a website developed for an online tea delivery service. This GitHub
 
 1. Clone the repository
 ```sh
-[git clone git@github.com:ramachandransaama/irl-core-components.git](https://github.com/SruthiKrish19/client-tea-machi.git)
+git clone git@github.com:ramachandransaama/irl-core-components.git
 ```
   
 2. Install the requirements
