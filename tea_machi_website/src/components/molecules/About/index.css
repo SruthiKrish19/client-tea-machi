@@ -1,0 +1,59 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
+    background-color: black;
+    padding: 2rem;
+  }
+  
+  .social-media {
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .sm-icon {
+    display: flex;
+    margin-left: 2rem;
+  }
+  
+  .sm-icon:hover {
+    cursor: pointer;
+    color: #dde5b6;
+  }
+  
+  h1 {
+    color: white;
+    font-size: 8rem;
+    text-align: center;
+  }
+  
+  p {
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .about-content {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .about {
+      height: auto;
+    }
+  
+    h1 {
+      font-size: 3rem;
+    }
+  
+    p {
+      font-size: 1rem;
+    }
+  }
+  

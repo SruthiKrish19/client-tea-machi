@@ -1,0 +1,43 @@
+.collapse-container {
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  margin-bottom: 0.5rem;
+  max-height: 1000px;
+}
+
+.collapse-container.open {
+  max-height: 1000px;
+}
+
+.card {
+  padding: 0.1rem;
+  width: 50%;
+}
+
+.card-header {
+  padding: 0.5rem;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-icon {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.card-icon.rotate {
+  transform: rotate(180deg);
+}
+
+.card-body {
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-top: none;
+  transition: opacity 0.3s ease;
+}
+
+.collapse-container.open .card-body {
+  opacity: 1;
+}
