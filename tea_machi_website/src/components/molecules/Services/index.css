@@ -1,74 +1,78 @@
 .service-container {
-  padding: 2rem;
+  background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/leaves.png');
+  background-repeat: repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin: 40px 0; */
 }
 
 .service-item {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  margin-bottom: 1.5rem;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  background: linear-gradient(135deg, rgba(224, 224, 224, 0.4), rgba(255, 255, 255, 0.9));
+  border-radius: 30px;
+  box-shadow: 15px 15px 30px rgba(190, 190, 190, 0.5), -15px -15px 30px rgba(255, 255, 255, 0.9);
+  text-align: center;
+}
+
+
+.service-item.animate {
+  margin: 18px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-img {
+  flex: 1;
+  text-align: left;
+}
+
+.service-img img {
+  max-width: 50%;
+  height: auto;
+}
+
+.service-text {
+  flex: 1;
+  text-align: center;
 }
 
 .service-heading {
-  font-size: 1.5rem;
+  color: black;
+  font-size: 24px;
   font-weight: bold;
 }
 
 .service-content {
-  font-size: 1rem;
-  margin-top: 0.5rem;
+  color: black;
+  margin-top: 10px;
+  font-size: 16px;
 }
 
-.service-img {
-  flex: 0 0 50%;
-  text-align: center;
-  margin-right: 1rem;
+.service-item.reverse {
+  flex-direction: row-reverse;
 }
 
-.service-text {
-  flex: 0 0 50%;
-  margin-left: 1rem;
-}
-
-.responsive-img {
-  max-width: 100%;
-  height: auto;
-}
+/* Responsive Styles */
 
 @media (max-width: 768px) {
   .service-item {
     flex-direction: column;
-    align-items: flex-start;
   }
 
-  .service-img,
-  .service-text {
-    flex: 1;
-    margin-right: 0;
-    margin-left: 0;
-  }
-
-  .service-img {
-    text-align: left;
-  }
-
-  .responsive-img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 1rem;
+  .service-img img {
+    max-width: 50%;
   }
 }
 
-@media (max-width: 576px) {
-  .service-container {
-    padding: 0.5rem;
-  }
-
-  .service-heading {
-    font-size: 1rem;
-  }
-
-  .service-content {
-    font-size: 0.8rem;
+@media (max-width: 480px) {
+  .service-img img {
+    max-width: 80%;
   }
 }

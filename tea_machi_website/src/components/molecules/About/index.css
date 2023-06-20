@@ -37,9 +37,15 @@
   }
   
   .about-content {
-    margin-top: 2rem;
-    text-align: center;
-    font-size: 1.5rem;
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/leaves.png');
+    background-repeat: repeat;
+    color: black;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: #f2f2f2;
+  padding: 1.5rem;
+  border-radius: 10px;
   }
   
   /* Responsive Styles */

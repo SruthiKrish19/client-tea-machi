@@ -1,5 +1,7 @@
 .contact-container {
     padding: 2rem;
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/leaves.png');
+    background-repeat: repeat;
 }
 
 .contact-header {
@@ -9,6 +11,8 @@
 
 .contact-content {
     font-size: 1rem;
+    color: black;
+
 }
 
 .form-container {
@@ -17,6 +21,8 @@
 }
 
 label {
+    color: black;
+
     display: block;
     margin-bottom: 5px;
     /* font-weight: bold; */
