@@ -2,6 +2,11 @@ import React from "react";
 import logo from "../../../assets/tea-machi-logo.png";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import "./index.css";
+import {
+  MapContainer,
+  TileLayer,
+  useMap,
+} from 'https://cdn.esm.sh/react-leaflet'
 
 function Footer() {
   return (
@@ -34,6 +39,7 @@ function Footer() {
         </div>
       </div>
       <p className="footer-creator">Created with ❤️ by Midden & Ena!</p>
+      
     </footer>
   );
 }
