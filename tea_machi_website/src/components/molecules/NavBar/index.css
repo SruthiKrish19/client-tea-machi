@@ -6,7 +6,7 @@
 }
 
 :root {
-	--mainColor: #134634;
+	--mainColor: #bc4749;
 	--mainColorLight: #184e77;
 	--secondaryColor: #dde5b6;
 	--textColor: #fff;
@@ -47,6 +47,8 @@ nav a {
 	color: var(--textColor);
 	text-decoration: none;
 }
+
+
 
 nav a:hover {
 	color: var(--secondaryColor);

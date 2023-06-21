@@ -1,6 +1,7 @@
 import "./index.css";
 import React, { useState } from "react";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+// 
 import Collapsable from "../../atoms/Collapse";
 import { faqData } from "./FAQs"
 import { faqFooter } from "../../../constants";

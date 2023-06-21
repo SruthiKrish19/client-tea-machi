@@ -17,7 +17,7 @@ function Navbar({ navLinks }) {
         <img src={logo} alt="tea-machi" className="logo-image" />
         <h3>Tea Machi</h3>
       </div>
-      <nav ref={navRef} className="navbar">
+      <nav ref={navRef} className="navbars">
         {navLinks.map((link) => (
           <span key={link.name} onClick={showNavbar}>
             <Link
