@@ -1,11 +1,43 @@
 .about {
+  position: relative;
   display: flex;
-  
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  height: 400px;
-  background-color: black;
-  padding: 2rem;
+  min-height: 500px;
+  background-image: url('src/assets/about-image.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: -100px;
+  margin-bottom: 4rem;
+  background-color: rgba(0, 0, 0, 0);
+  transform: scale(0.5);
+  animation: zoomIn 30s ease-in-out infinite;
+  padding: 8rem;
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .social-media {
@@ -13,11 +45,13 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top: 2rem;
 }
 
 .sm-icon {
   display: flex;
   margin-left: 2rem;
+  z-index: 10;
 }
 
 .sm-icon:hover {
@@ -26,33 +60,45 @@
 }
 
 h1 {
-  color: white;
-  font-size: 8rem;
+  color: #000;
+  font-size: 10rem !important;
   text-align: center;
-}
-
-p {
-  color: white;
-  font-size: 1.5rem;
-  text-align: center;
+  margin-top: 2rem !important;
+  color: #fff !important;
+  z-index: 10;
 }
 
 .about-content {
-  background: url('https://www.toptal.com/designers/subtlepatterns/uploads/leaves.png') repeat;
-
-  margin-top: 2rem;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  color: #fff;
+  margin-top: 2rem;
+  z-index: 10;
 }
 
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .about {
-    height: auto;
+    padding: 6rem;
+    margin-top: -50px;
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: 8rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    padding: 4rem;
+    /* background-size: 100% 100%; */
+  }
+
+  h1 {
+    font-size: 4rem;
   }
 
   p {

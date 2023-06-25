@@ -24,7 +24,7 @@ function Navbar({ navLinks }) {
               to={link.href}
               smooth={true}
               duration={300}
-              offset={-60} // Adjust the offset as needed to align the scroll position
+              offset={-60}
               className="nav-link"
             >
               {link.name}

@@ -26,6 +26,9 @@ function Home() {
       <Element name="services">
         <Services className="services" />
       </Element>
+      <Element>
+        <Subscriptions className="subs" />
+      </Element>
       <Element name="faqs">
         <Faqs className="faqs" />
       </Element>
