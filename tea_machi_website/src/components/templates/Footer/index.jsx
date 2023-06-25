@@ -7,13 +7,21 @@ import "./index.css";
 //   TileLayer,
 //   useMap,
 // } from 'https://cdn.esm.sh/react-leaflet'
-import { MapContainer, TileLayer,Marker } from "react-leaflet";
-import "leaflet/dist/leaflet.css"
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+import { Icon } from "leaflet";
 function Footer() {
-  const markers=[{
-    geocode:[11.0361,76.9783],
-    popUp:"Hi Sru Pig"
-  }]
+  const markers = [
+    {
+      geocode: [11.0361, 76.9783],
+      popUp: "Hi Sru Pig",
+    },
+  ];
+
+  const custonIcon = new Icon({
+    iconUrl: "https://cdn-icons-png.flaticon.com/256/9101/9101314.png",
+    iconSize: [28, 32],
+  });
   return (
     <footer className="footer-container">
       <div className="footer-content">
@@ -47,18 +55,16 @@ function Footer() {
         {/* <MapComponent /> */}
         <MapContainer center={[11.0168, 76.9558]} zoom={13}>
           <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
-
-        />
-        {
-
-        markers.map(marker =>(
-          <Marker position={marker.geocode}>
-
-          </Marker>
-        ))
-        }
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          {markers.map((marker) => (
+            <Marker position={marker.geocode} icon={custonIcon}>
+              <Popup>
+               {marker.popUp}
+              </Popup>
+            </Marker>
+          ))}
         </MapContainer>
       </div>
       <p className="footer-creator">Created with ❤️ by Midden & Ena!</p>
