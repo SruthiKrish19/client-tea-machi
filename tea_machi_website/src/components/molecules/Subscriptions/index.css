@@ -1,12 +1,118 @@
-.subscription-container{
-    padding: 2rem;
+.subscription-container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.subscription-heading {
-    font-size: 1.5rem;
-    font-weight: 13px;
+.subs-title h2 {
+  position: relative;
+  margin-bottom: 20px;
+  display: inline-block;
+  font-weight: 900;
+  line-height: 1;
+  text-align: center;
 }
 
-.subscription-content{
-    font-size: 1rem;
+.subs-title h2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 60px;
+  height: 2px;
+  background: #E86A33;
+  bottom: -20px;
+  margin-left: -30px;
+}
+
+.subs-content {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.subscription-card-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.subscription-card {
+  background: linear-gradient(135deg, rgba(224, 224, 224, 0.4), rgba(255, 255, 255, 0.9));
+  border-radius: 30px;
+  box-shadow: 15px 15px 30px rgba(190, 190, 190, 0.5), -15px -15px 30px rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  margin: 20px;
+  width: 350px;
+  max-width: 100%;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.subscription-card.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.subscription-card-heading {
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.subscription-card-content {
+  color: black;
+  margin-top: 10px;
+  font-size: 16px;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tick-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.tick-list li:before {
+  content: "\2713";
+  margin-right: 8px;
+}
+
+.subscription-card-content {
+  color: black;
+  margin-top: 10px;
+  font-size: 16px;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.subscription-card-content li {
+  margin-bottom: 5px;
+}
+
+.subscription-card-content li:before {
+  content: "\2713";
+  margin-right: 8px;
+  color: #E86A33;
+}
+
+.subscription-card-content p {
+  margin-top: 10px;
+}
+
+.subscription-card-content a {
+  color: #E86A33;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.subscription-card-content a:hover {
+  color: #E86A33;
 }

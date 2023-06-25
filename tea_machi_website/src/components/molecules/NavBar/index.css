@@ -6,46 +6,48 @@
 }
 
 :root {
-	--mainColor: #bc4749;
-	--mainColorLight: #184e77;
-	--secondaryColor: #dde5b6;
+	--mainColor: #E86A33;
+	--mainColorLight: #9575DE;
+	--secondaryColor: #9575DE;
 	--textColor: #fff;
 }
 
 .logo-container {
-    display: flex;
-    align-items: center;
-    margin-right: auto;
-  }
-  
-  .logo-image {
-    width: 70px;
-    height: auto;
-    margin-right: 1rem;
-    margin-left: -1rem;
-  }
-  
-  h3 {
-    margin: 0;
-  }
+	display: flex;
+	align-items: center;
+	margin-right: auto;
+}
+
+.logo-image {
+	width: 70px;
+	height: auto;
+	margin-right: 1rem;
+	margin-left: -1rem;
+}
+
+h3 {
+	margin: 0;
+}
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content:space-evenly;
-    height: 80px;
-    padding: 0 3rem;
-    background-color: var(--mainColor);
-    color: var(--textColor);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	height: 80px;
+	padding: 0 3rem;
+	background-color: var(--mainColor);
+	color: var(--textColor);
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	opacity: 0.9;
+}
 
 nav a {
 	margin: 0 1rem;
 	color: var(--textColor);
 	text-decoration: none;
+	cursor: pointer;
 }
 
 
@@ -73,10 +75,11 @@ nav {
 }
 
 @media only screen and (max-width: 1024px) {
-    header {
-        position: relative;
-      }
-      
+	header {
+		position: relative;
+		opacity: 0.9;
+	}
+
 	header .nav-btn {
 		visibility: visible;
 		opacity: 1;

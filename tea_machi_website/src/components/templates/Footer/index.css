@@ -1,8 +1,9 @@
 .footer-container {
-  background-color: #333;
+  background-color: #E86A33;
   color: white;
-  padding: 1rem;
+  padding: 0.5rem;
   text-align: center;
+  opacity: .9;
 }
 
 .footer-content {
@@ -12,9 +13,7 @@
   flex-wrap: wrap;
   gap: 20px;
 }
-.leaflet-container{
-  height: 100vh;
-}
+
 .footer-section {
   flex: 1;
   margin: 10px;
