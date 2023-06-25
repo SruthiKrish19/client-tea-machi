@@ -15,12 +15,12 @@ function Contact() {
   };
 
   return (
-    <>
-      <div className="contact-container">
-        <div className="contact-header">{contactHeading}</div>
-        <div className="contact-content">{contactContent}</div>
-        <div className="contact-form">
-          <form onSubmit={handleSubmit}>
+    <div className="contact-container">
+      <div className="contact-header">{contactHeading}</div>
+      <div className="contact-content">{contactContent}</div>
+      <div className="form-container">
+        <form onSubmit={handleSubmit}>
+          <div className="input-container">
             <label htmlFor="name">Name:</label>
             <input
               type="text"
@@ -29,30 +29,36 @@ function Contact() {
               onChange={(e) => setName(e.target.value)}
               required
             />
+          </div>
 
+          <div className="input-container">
             <label htmlFor="email">Email:</label>
             <input
-              type="email"
+              type="text"
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
+          </div>
 
+          <div className="input-container">
             <label htmlFor="message">Message:</label>
-            <textarea
+            <input
+            type="text"
               id="message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               required
-            ></textarea>
+            />
+          </div>
 
-            <input type="submit" value="Submit" />
-          </form>
-        </div>
+          <input type="submit" value="Submit" />
+        </form>
       </div>
-    </>
+    </div>
   );
 }
+
 
 export default Contact;
