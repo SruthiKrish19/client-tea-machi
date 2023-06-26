@@ -13,6 +13,7 @@
 }
 
 .logo-container {
+	margin-top:2px;
 	display: flex;
 	align-items: center;
 	margin-right: auto;
@@ -41,6 +42,8 @@ header {
 	top: 0;
 	z-index: 100;
 	opacity: 0.9;
+	transition: transform 0.3s ease-in-out; /* Added transition property */
+
 }
 
 nav a {
@@ -87,7 +90,7 @@ nav {
 
 	header nav {
 		position: fixed;
-		top: -100vh;
+		top: -101vh;
 		left: 0;
 		height: 100%;
 		width: 100%;
@@ -102,6 +105,8 @@ nav {
 
 	header .responsive_nav {
 		transform: translateY(100vh);
+		transform: translateY(100%); /* Changed translateY to transform for transition */
+
 	}
 
 	nav .nav-close-btn {
