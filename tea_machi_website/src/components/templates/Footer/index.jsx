@@ -4,12 +4,12 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 import "./index.css";
 
 function Footer() {
-  const markers = [
-    {
-      geocode: [11.0361, 76.9783],
-      popUp: "Hi Sru Pig",
-    },
-  ];
+  // const markers = [
+  //   {
+  //     geocode: [11.0361, 76.9783],
+  //     popUp: "Hi Sru Pig",
+  //   },
+  // ];
 
   return (
     <footer className="footer-container">
@@ -28,12 +28,12 @@ function Footer() {
           <h5 className="section-title">Follow us!</h5>
           <ul className="social-info">
             <li>
-              <a href="https://facebook.com">
+              <a href="https://www.facebook.com/profile.php?id=100092968516950&mibextid=ZbWKwL">
                 <FaFacebook size={24} />
               </a>
             </li>
             <li>
-              <a href="https://instagram.com">
+              <a href="https://www.instagram.com/teamachi_cbe/#">
                 <FaInstagram size={24} />
               </a>
             </li>

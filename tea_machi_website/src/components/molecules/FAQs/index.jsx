@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import "./index.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 import { faqData } from "./FAQs";
 import { faqHeader, faqFooter } from "../../../constants";
 import Collapsable from "../../atoms/Collapse";

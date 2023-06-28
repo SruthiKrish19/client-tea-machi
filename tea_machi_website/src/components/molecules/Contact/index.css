@@ -1,28 +1,26 @@
 .contact-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 2rem;
   text-align: center;
 }
 
-.contact-heading {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-  text-align: center;
+.contact-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.contact-content {
-  font-size: 1rem;
-  color: #000000;
+.contact-form {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 400px;
   margin-bottom: 20px;
-  text-align: center;
 }
 
 .form-container {
-  width: 60%;
   background: #ffffff;
   box-shadow: 15px 15px 30px rgba(190, 190, 190, 0.5),
     -15px -15px 30px rgba(255, 255, 255, 0.9);
@@ -32,42 +30,13 @@
 }
 
 .contact-details {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  margin-top: 20px;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
 }
 
 .contact-details-content {
-  background: #ffffff;
   padding: 20px;
-}
-
-.contact-header {
-  position: relative;
-  margin-bottom: 50px;
-  display: inline-block;
-  font-weight: 900;
-  line-height: 1;
-  /* text-align: center; */
-  font-size: 24px;
-}
-
-.contact-header::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  width: 60px;
-  height: 2px;
-  background: #e86a33;
-  bottom: -20px;
-  margin-left: -30px;
-}
-
-.contact-content {
-  font-size: 1rem;
-  color: #000000;
-  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -104,13 +73,20 @@ input[type="submit"]:hover {
   background-color: rgba(228, 154, 64, 0.82);
 }
 
-@media (max-width: 480px) {
-  .form-container {
-    max-width: 100%;
-    padding: 0 20px;
+@media (min-width: 768px) {
+  .contact-row {
+    flex-direction: row;
+    align-items: flex-start; /* Align items to the top of the row */
   }
 
-  input[type="submit"] {
-    width: 100%;
+  .contact-form,
+  .contact-details {
+    flex: 1;
+    margin-bottom: 0;
+  }
+
+  .form-container,
+  .contact-details {
+    margin-left: 20px;
   }
 }

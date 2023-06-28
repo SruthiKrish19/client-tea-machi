@@ -11,6 +11,12 @@ function Navbar({ navLinks }) {
     navRef.current.classList.toggle("responsive_nav");
   };
 
+  const handleNavItemClick = () => {
+    if (navRef.current.classList.contains("responsive_nav")) {
+      showNavbar();
+    }
+  };
+
   return (
     <header>
       <div className="logo-container">
@@ -19,16 +25,19 @@ function Navbar({ navLinks }) {
       </div>
       <nav ref={navRef} className="navbars">
         {navLinks.map((link) => (
-          <span key={link.name} onClick={showNavbar}>
+          <span key={link.name} onClick={handleNavItemClick}>
             <Link
-              to={link.href}
-              smooth={true}
-              duration={300}
-              offset={-60}
-              className="nav-link"
-            >
-              {link.name}
-            </Link>
+  key={link.name}
+  to={link.href}
+  smooth={true}
+  duration={600}
+  offset={-20}
+  className="nav-link"
+  onClick={showNavbar}
+>
+  {link.name}
+</Link>
+
           </span>
         ))}
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
