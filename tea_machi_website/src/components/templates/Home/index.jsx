@@ -21,7 +21,9 @@ function Home() {
     <>
       <Navbar navLinks={navLinks} />
       <Element name="about">
-        <About className="about" />
+        <div className="about-container">
+          <About className="about" />
+        </div>
       </Element>
       <Element name="services">
         <Services className="services" />

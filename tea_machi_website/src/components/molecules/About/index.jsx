@@ -13,16 +13,10 @@ function About() {
       <div className="social-media">
         <FaEnvelope size={24} className="sm-icon" />
         <FaWhatsapp size={24} className="sm-icon" />
-        <a href="https://www.instagram.com/teamachi_cbe/#">
         <FaInstagram size={24} className="sm-icon" />
-
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=100092968516950&mibextid=ZbWKwL">
         <FaFacebook size={24} className="sm-icon" />
-
-        </a>
       </div>
-      <p>{teaMachi}</p>
+      <h1>{teaMachi}</h1>
       {/* <p>{tagline}</p> */}
       <div className="about-content">{about}</div>
     </div>

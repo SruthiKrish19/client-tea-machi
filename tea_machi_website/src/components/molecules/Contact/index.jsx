@@ -15,14 +15,14 @@ function Contact() {
   };
 
   return (
-    <div className="contact-container">
-      <div className="contact-row">
-        <div className="contact-header">{contactHeading}</div>
+    <>
+      <div className="con-title text-center pb-3">
+        <h2>{contactHeading}</h2>
       </div>
-      <div className="contact-row">
-        <div className="contact-content">{contactContent}</div>
-      </div>
-      {/* <div className="contact-row"> */}
+
+      <div className="contact-content">{contactContent}</div>
+
+      <div className="contact-container">
         <div className="contact-form">
           <div className="form-container">
             <form onSubmit={handleSubmit}>
@@ -65,13 +65,18 @@ function Contact() {
         <div className="contact-details">
           <div className="contact-details-content">
             <h3>Contact Details</h3>
-            <p>Address: 123 Main St, City, Country</p>
-            <p>Phone: +1 234 567 890</p>
-            <p>Email: example@example.com</p>
+            <p>Phone: +91 75984 54537</p>
+            <p>Email: teamachiceo@gmail.com</p>
+            <hr/>
+            <h3>Employment Details</h3>
+            <p>
+              To apply for a job with Cup Time, please send a cover letter
+              together with your Resume to: teamachiceo@gmail.com
+            </p>
           </div>
         </div>
       </div>
-    // </div>
+    </>
   );
 }
 
