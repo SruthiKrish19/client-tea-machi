@@ -1,3 +1,23 @@
+.ser-title h2 {
+  position: relative;
+  margin-bottom: 20px;
+  display: inline-block;
+  font-weight: 900;
+  line-height: 1;
+  text-align: center;
+}
+
+.ser-title h2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 60px;
+  height: 2px;
+  background: #E86A33;
+  bottom: -20px;
+  margin-left: -30px;
+}
+
 .service-container {
   display: flex;
   flex-wrap: wrap;
