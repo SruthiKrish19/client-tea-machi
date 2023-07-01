@@ -1,6 +1,6 @@
 import "./index.css";
 import { useState } from "react";
-import { contactHeading, contactContent } from "../../../constants";
+import { contactHeading, contactContent, contactDetails, contactPhone, contactEmail, employementContent, employement } from "../../../constants";
 
 function Contact() {
   const [name, setName] = useState("");
@@ -64,15 +64,12 @@ function Contact() {
         </div>
         <div className="contact-details">
           <div className="contact-details-content">
-            <h3>Contact Details</h3>
-            <p>Phone: +91 75984 54537</p>
-            <p>Email: teamachiceo@gmail.com</p>
+            <h3>{contactDetails}</h3>
+            <p>{contactPhone}</p>
+            <p>{contactEmail}</p>
             <hr/>
-            <h3>Employment Details</h3>
-            <p>
-              To apply for a job with Cup Time, please send a cover letter
-              together with your Resume to: teamachiceo@gmail.com
-            </p>
+            <h3>{employement}</h3>
+            <p>{employementContent}</p>
           </div>
         </div>
       </div>
