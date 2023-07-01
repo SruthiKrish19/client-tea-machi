@@ -20,6 +20,7 @@ function Footer() {
         <div className="footer-section">
           <h5 className="section-title">Reach out to us!</h5>
           <ul className="contact-info">
+            <li>+91 90432 73353</li>
             <li>+91 75984 54537</li>
             <li>teamachiceo@gmail.com</li>
           </ul>

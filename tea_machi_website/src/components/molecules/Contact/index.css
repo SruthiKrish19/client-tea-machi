@@ -37,6 +37,7 @@
   width: 100%;
   max-width: 500px;
   margin-left: 5rem;
+  margin-bottom: 20px;
 }
 
 .contact-details {
@@ -44,6 +45,10 @@
   margin-left: 100px !important;
   align-items: right;
   width: 400px;
+}
+
+.contact-details h3 {
+  font-weight: 600;
 }
 
 .form-container {
@@ -86,5 +91,58 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: rgba(228, 154, 64, 0.82);
+}
+
+
+/* Mobile Styles */
+
+.contact-container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.contact-content {
+  padding: 10px;
+}
+
+.contact-form {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 320px;
+  margin-left: 0;
+}
+
+.contact-details {
+  margin-top: 20px;
+  margin-left: 0 !important;
+  align-items: center;
+  width: 100%;
+}
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+
+  .contact-container {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .contact-form {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px;
+    margin-left: 5rem;
+    margin-bottom: 20px;
+  }
+  
+  .contact-details {
+    margin-top: 20px;
+    margin-left: 100px !important;
+    align-items: right;
+    width: 400px;
+  }
 }
 

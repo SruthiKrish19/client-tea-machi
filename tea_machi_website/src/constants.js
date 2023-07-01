@@ -1,7 +1,7 @@
 // about
-const teaMachi = "TEA MACHI"
-const tagline = "It all begins with a sip!"
-const about = "Welcome to Tea Machi, your go-to destination for high-quality Tea and refreshment at your interval breaks for your employees. A healthy and happy employee is a company’s assets and we cater to this need of yours by delivering good quality Tea Or Coffee with snacks those are packed hygienically and delivered right to your office and factories. We take pride in offering a wide variety of delicious snacks that are perfect for any time of the day. With our state-of-the-art machinery and packaging process, we ensure that every snack you receive maintains its freshness and quality."
+const teaMachi = "Welcome to Tea Machi!"
+const tagline = "Machi Oru Tea Sollen!"
+const about = "We provide high-quality Tea, Coffee, and refreshments for your employees. Our hygienically packed snacks are delivered to your office or factory, ensuring freshness and quality. Boost your employees' well-being with our delicious offerings throughout the day."
 
 // services
 const serviceHeading1 = "What do we do?"
@@ -24,6 +24,11 @@ const faqFooter = "If you have any further questions or inquiries, please feel f
 // contact
 const contactHeading = "Contact"
 const contactContent = "Indulge in the goodness of nature with our first-grade teas. Order from Tea Machi today and taste the difference!"
+const contactDetails = "Contact Details"
+const contactPhone = "Phone: +91 90432 73353 / +91 75984 54537"
+const contactEmail = "Email: teamachiceo@gmail.com"
+const employement = "Employment Details"
+const employementContent = "To apply for a job with Tea Machi, please send a cover letter together with your Resume to: teamachiceo@gmail.com"
 
 export {
     teaMachi,
@@ -40,5 +45,10 @@ export {
     faqHeader,
     faqFooter,
     contactHeading,
-    contactContent
+    contactContent,
+    contactDetails,
+    contactPhone,
+    contactEmail,
+    employement,
+    employementContent
 }
