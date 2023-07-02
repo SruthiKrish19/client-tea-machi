@@ -1,1 +1,17 @@
+# Vite
 node_modules
+dist/
+build/
+
+# IDE / Editor
+.vscode/
+
+# Miscellaneous
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+package-lock.json
+
+.env
