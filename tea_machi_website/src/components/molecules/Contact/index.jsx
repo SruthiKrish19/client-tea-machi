@@ -1,17 +1,33 @@
 import "./index.css";
-import { useState } from "react";
-import { contactHeading, contactContent, contactDetails, contactPhone, contactEmail, employementContent, employement } from "../../../constants";
+import { useRef } from "react";
+import emailjs from "emailjs-com";
+import {
+  contactHeading,
+  contactContent,
+  contactDetails,
+  contactPhone,
+  contactEmail,
+  employementContent,
+  employement,
+} from "../../../constants";
 
 function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const form = useRef();
+  const serviceId = import.meta.env.VITE_SERVICE_ID
+  const templateId = import.meta.env.VITE_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_PUBLIC_KEY;
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Send form data to the server and handle email sending
-    // You can use Axios or Fetch API to make a POST request to the server
-    // Include the form data in the request body and handle the email sending on the server
+
+    emailjs
+      .sendForm(serviceId, templateId, form.current, publicKey)
+      .then((result) => {
+        console.log(result.text);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
 
   return (
@@ -25,37 +41,20 @@ function Contact() {
       <div className="contact-container">
         <div className="contact-form">
           <div className="form-container">
-            <form onSubmit={handleSubmit}>
+            <form ref={form} onSubmit={handleSubmit}>
               <div className="input-container">
                 <label htmlFor="name">Name:</label>
-                <input
-                  type="text"
-                  id="name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  required
-                />
+                <input type="text" id="name" name="name" required />
               </div>
 
               <div className="input-container">
                 <label htmlFor="email">Email:</label>
-                <input
-                  type="email"
-                  id="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
+                <input type="email" id="email" name="email" required />
               </div>
 
               <div className="input-container">
                 <label htmlFor="message">Message:</label>
-                <textarea
-                  id="message"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  required
-                ></textarea>
+                <textarea id="message" name="message" required></textarea>
               </div>
 
               <input type="submit" value="Submit" />
@@ -67,7 +66,7 @@ function Contact() {
             <h3>{contactDetails}</h3>
             <p>{contactPhone}</p>
             <p>{contactEmail}</p>
-            <hr/>
+            <hr />
             <h3>{employement}</h3>
             <p>{employementContent}</p>
           </div>
