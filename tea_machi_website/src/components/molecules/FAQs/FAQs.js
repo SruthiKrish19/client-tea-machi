@@ -34,6 +34,10 @@ const faqData = {
     "8": {
         "header": "Can I skip or pause my subscription?",
         "content": "For the 30-day package, it is applicable in case of a long break. We kindly request that you inform us in advance of any planned pauses in your subscription to avoid any inconvenience. Failure to notify us may result in your pause request not being considered."
+    },
+    "9": {
+        "header": "Whom do we serve?",
+        "content": "We serve Industries, Retail shops, Hospitals, IT & Software companies, Schools & colleges and anyone who has employees in need of tasty refreshments!"
     }
 }
 

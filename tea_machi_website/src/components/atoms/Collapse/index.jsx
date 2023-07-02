@@ -26,7 +26,7 @@ function Collapsable({ collapseHeader, collapseContent, index }) {
           </h5>
         </div>
         <FaChevronCircleDown
-            size={24}
+            // size={24}
             className={`card-icon ${isOpen ? "rotate" : ""}`}
           />
       </div>
