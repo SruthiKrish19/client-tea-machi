@@ -40,9 +40,8 @@
 }
 
 .subscription-card {
-  background: linear-gradient(135deg, rgba(224, 224, 224, 0.4), rgba(255, 255, 255, 0.9));
   border-radius: 30px;
-  box-shadow: 15px 15px 30px rgba(190, 190, 190, 0.5), -15px -15px 30px rgba(255, 255, 255, 0.9);
+  box-shadow: 15px 15px 30px rgba(135, 134, 134, 0.313), -15px -15px 30px rgba(255, 255, 255, 0.9);
   padding: 20px;
   margin: 20px;
   width: 350px;
@@ -50,6 +49,10 @@
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.subscription-card:hover{
+  background-color: rgba(255, 140, 0, 0.107);;
 }
 
 .subscription-card.animate {
