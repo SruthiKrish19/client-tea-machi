@@ -48,8 +48,8 @@ function Contact() {
               </div>
 
               <div className="input-container">
-                <label htmlFor="email">Email:</label>
-                <input type="email" id="email" name="email" required />
+                <label htmlFor="contact">Contact:</label>
+                <input type="tel" id="contact" name="email" required />
               </div>
 
               <div className="input-container">
